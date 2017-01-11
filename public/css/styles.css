@@ -7,12 +7,35 @@
  * Global CSS.
  */
 
-.container
-{
-    /* center contents */
-    margin-left: auto;
-    margin-right: auto;
+
+body {
+    font: 400 15px Lato, sans-serif;
     
 }
 
 
+.jumbotron { 
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+    height:200px;
+}
+.container {
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+}
+
+
+.alert
+{
+    font-family:Montserrat,sans-serif;
+}
+
+#chat_room{
+    margin-top:5px;
+    background-color:#f6f6f6;
+    border:2px solid grey;
+    border-radius:10px;
+    height:490px;
+    
+}

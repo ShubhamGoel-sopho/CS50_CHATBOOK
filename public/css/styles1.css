@@ -1,0 +1,29 @@
+body {
+    font: 400 15px Lato, sans-serif;
+}
+
+
+.jumbotron { 
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+    height:200px;
+    
+}
+
+#wrapper {
+    width:100%;
+    margin-left:0px;
+    margin-right:0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	
+}
+
+.container {
+    width:100%;
+    overflow:hidden;
+    padding-right: 0px;
+	padding-left: 0px;
+     margin-left:0px;
+    margin-right:0px;
+}

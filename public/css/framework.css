@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	postion:relative;
+	font-family:Lato,sans-serif;
+}
+
+
+#carousel1, .container-fluid{
+	overflow:hidden;
+}
+
+
+h1, h3, p {
+	text-align: center;
+	
+}
+p,li{
+	font-family:Montserrat,sans-serif;
+}
+
+#main {
+	width: 80%;
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+footer {
+	margin-top: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #383838;
+	color: #FFFFFF;
+	text-align: center;
+
+}
+.image-fill {
+	width: 100%;
+	max-height:500px;
+}
+#wrapper {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.carousel-caption h1,.carousel-caption h2 {
+	color:#ff4d4d;
+}
+
+.carousel-caption p {
+	color:#3366ff;
+}
+
+.affix {
+      top: 0;
+      width: 100%;
+}
+
+
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+nav{
+	z-index:5;
+}
+
+ .glyphicon-globe:hover{
+	color:cornflowerblue;
+}
+
+
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
