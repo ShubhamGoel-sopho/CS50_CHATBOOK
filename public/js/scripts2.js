@@ -4,8 +4,9 @@ $(document).ready(function(){
        var username = $("#username").val();
        var password = $("#password").val();
        var name = $("#name").val();
+       var email = $("$email").val();
        var con_password = $("#confirm_password").val();
-       if(username != "" && password != "" && con_password != "" && password != "")
+       if(username != "" && password != "" && con_password != "" && password != "" && email != "")
        {
            if(con_password == password)
            {

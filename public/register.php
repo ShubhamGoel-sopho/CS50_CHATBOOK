@@ -14,7 +14,7 @@
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // TODO
-        if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["name"]) || empty($_POST["confirm_password"]))
+        if(empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["name"]) || empty($_POST["confirm_password"]) || empty($_POST["email"]))
         {
             apologize("you must provide the username or password");
         }
@@ -22,7 +22,7 @@
         {
             if($_POST["password"] == $_POST["confirm_password"])
             {
-                $ans = CS50::query("INSERT IGNORE INTO users (name,username,password) VALUES(?, ?, ?)", $_POST["name"],$_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT));
+                $ans = CS50::query("INSERT IGNORE INTO users (email,name,username,password) VALUES(?, ?, ?, ?)",$_POST["email"],$_POST["name"],$_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT));
                 if($ans != 0)
                 {
                     $rows = CS50::query("SELECT LAST_INSERT_ID() AS id");

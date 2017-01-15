@@ -1,0 +1,7 @@
+body {
+    font: 400 15px Lato, sans-serif;
+    overflow-y:scroll;
+}
+html{
+    overflow:auto;
+}

@@ -2,7 +2,8 @@ $(document).ready(function(){
    //on submit of the login form validation from the client side
    $("#login").click(function(){
        var username = $("#username").val();
-       var password = $("password").val();
+       var password = $("#password").val();
+       
        if(username != "" && password != "")
        {
            

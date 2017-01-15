@@ -91,7 +91,7 @@
       <p><span class="glyphicon glyphicon-phone"></span> +91 9990906406</p>
       <p><span class="glyphicon glyphicon-envelope"></span> shubhamgoel9612@outlook.com</p> 
     </div>
-    <form method="POST" action="contact.php">
+    <form method="POST" action="contact_without_login.php">
     <div class="col-sm-7">
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -101,7 +101,7 @@
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <textarea class="form-control"  required id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
           <button class="btn btn-default pull-right" type="submit">Send</button>

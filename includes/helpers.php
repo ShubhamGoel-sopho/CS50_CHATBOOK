@@ -4,7 +4,7 @@
      * helpers.php
      *
      * Computer Science 50
-     * Problem Set 7
+     * Project3
      *
      * Helper functions.
      */
@@ -49,68 +49,7 @@
         session_destroy();
     }
 
-    /**
-     * Returns a stock by symbol (case-insensitively) else false if not found.
-     */
-    function lookup($symbol)
-    {
-        // reject symbols that start with ^
-        if (preg_match("/^\^/", $symbol))
-        {
-            return false;
-        }
-
-        // reject symbols that contain commas
-        if (preg_match("/,/", $symbol))
-        {
-            return false;
-        }
-
-        // headers for proxy servers
-        $headers = [
-            "Accept" => "*/*",
-            "Connection" => "Keep-Alive",
-            "User-Agent" => sprintf("curl/%s", curl_version()["version"])
-        ];
-
-        // open connection to Yahoo
-        $context = stream_context_create([
-            "http" => [
-                "header" => implode(array_map(function($value, $key) { return sprintf("%s: %s\r\n", $key, $value); }, $headers, array_keys($headers))),
-                "method" => "GET"
-            ]
-        ]);
-        $handle = @fopen("http://download.finance.yahoo.com/d/quotes.csv?f=snl1&s={$symbol}", "r", false, $context);
-        if ($handle === false)
-        {
-            // trigger (big, orange) error
-            trigger_error("Could not connect to Yahoo!", E_USER_ERROR);
-            exit;
-        }
- 
-        // download first line of CSV file
-        $data = fgetcsv($handle);
-        if ($data === false || count($data) == 1)
-        {
-            return false;
-        }
-
-        // close connection to Yahoo
-        fclose($handle);
-
-        // ensure symbol was found
-        if ($data[2] === "N/A" || $data[2] === "0.00")
-        {
-            return false;
-        }
-
-        // return stock as an associative array
-        return [
-            "symbol" => strtoupper($data[0]),
-            "name" => $data[1],
-            "price" => floatval($data[2])
-        ];
-    }
+    
 
     /**
      * Redirects user to location, which can be a URL or
@@ -154,6 +93,27 @@
         {
             trigger_error("Invalid view: {$view}", E_USER_ERROR);
         }
+    }
+    
+    
+    function send_message($message,$receiver)
+    {
+        $row = CS50::query("SELECT * FROM users WHERE id = ?",$_SESSION["id"]);
+        $val = CS50::query("INSERT INTO `messages` (user_id,sender_username,receiver_username,message,time_of_message) VALUES(?,?,?,?,NOW())",$_SESSION["id"],$row[0]["username"],$receiver,$message);
+        if($val == true)
+            echo "SENT";
+        else
+            echo "NOT SENT :(";
+    }
+    
+    function receive_message()
+    {
+        $row = CS50::query("SELECT * FROM users WHERE id = ?",$_SESSION["id"]);
+        $rows = CS50::query("SELECT * FROM messages WHERE (user_id = ? OR receiver_username = ?) ORDER BY time_of_message",$_SESSION["id"],$row[0]["username"]);
+        
+        // output articles as JSON (pretty-printed for debugging convenience)
+        header("Content-type: application/json");
+        print(json_encode($rows, JSON_PRETTY_PRINT));
     }
 
 ?>

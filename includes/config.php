@@ -4,7 +4,7 @@
      * config.php
      *
      * Computer Science 50
-     * Problem Set 7
+     * Project3
      *
      * Configures app.
      */
@@ -28,7 +28,7 @@
     {
         if (empty($_SESSION["id"]))
         {
-            redirect("login.php");
+            redirect("start_page_public.php");
         }
     }
 

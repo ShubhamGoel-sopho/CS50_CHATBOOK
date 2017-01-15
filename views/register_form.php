@@ -11,6 +11,11 @@
                 placeholder="Full Name" />
         </div>
         <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" id="email" class="form-control" maxlength="50"  required type="text" 
+                placeholder="Email" />
+        </div>
+        <div class="form-group">
             <label for="username">Choose Username</label>
             <input name="username" id="username" class="form-control" maxlength="25" minlength="5" required type="text" 
                     placeholder="User Name" />
