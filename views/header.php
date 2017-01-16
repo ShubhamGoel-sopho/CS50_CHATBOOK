@@ -29,7 +29,9 @@
         
          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-
+        
+        <!-- for fonts -->
+        <script src="https://use.fontawesome.com/502ed103c2.js"></script>
     </head>
 
   <body>
@@ -44,7 +46,6 @@
     	      
     	      <div class="collapse navbar-collapse" id="topFixedNavbar1">
     	        <ul class="nav navbar-nav">
-    	          <li ><a href="faq.php">FAQ</a><span class="sr-only">(current)</span></a></li>
     	          <li ><a  href="contact.php">Contact Us</a></li>
     	          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
     	            <ul class="dropdown-menu" role="menu">
