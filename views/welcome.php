@@ -39,45 +39,8 @@
                             <button type="submit" id="send" class="btn btn-info btn-lg">Send <span class="glyphicon glyphicon-send"></span></button>
                         </div> 
                          <div class="col-lg-8">
-                           <div class="form-group">
-                            <span><b>Select Your Friend:</b> </span>  
-                            <?php
-                                 
-                                $row = CS50::query("SELECT * FROM users WHERE id = ?",$_SESSION["id"]);
-                                $rows = CS50::query("SELECT * FROM friends WHERE (friend_1 = ? OR friend_2 = ?)",$row[0]["username"],$row[0]["username"]);
-                                
-                            ?>
-                            <select class="form-control" name="friend" id="friend" style="margin:3px">
-                             
-                               <?php
-                                 //iterate for every friend in the database for the user
-                                 if(!empty($rows)){
-                                    foreach($rows as $row1)
-                                    {
-                                        if($row1["friend_1"] == $row[0]["username"]){?>
-                                            <option value="<?=$row1['friend_2']?>"><?php 
-                                            $r  = CS50::query("SELECT * FROM users WHERE username = ?",$row1["friend_2"]);
-                                            echo $r[0]["name"];
-                                            ?></option>
-                                    <?php
-                                        }else if($row1["friend_2"] == $row[0]["username"]){?>
-                                        
-                                            <option value="<?=$row1['friend_1']?>"><?php 
-                                            $r  = CS50::query("SELECT * FROM users WHERE username = ?",$row1["friend_1"]);
-                                            echo $r[0]["name"];
-                                            ?></option>
-                                       <?php }
-                                    }
-                                  
-                                 }
-                                 else
-                                 {
-                                    echo "<option value='null'>You have no Friends</option>"; 
-                                 }
-                              ?>
-
-                               
-                            </select>
+                           <div class="form-group" id="friend_for_select">
+                            
                           </div>
                         </div>
                         

@@ -104,5 +104,38 @@ $(document).ready(function(){
         return false;    
     });  
     
+    //setInterval function for to load the friend in 30 seconds dynamically when someone connects to someone without refreshing the page
     
+    setInterval(function(){
+        var parameter =
+        {
+            chk:true
+        };
+        $.getJSON("https://ide50-shubhamgoel9512.c9users.io/dynamic_friend.php",parameter)
+        .done(function(data, textStatus, jqXHR) {
+            
+            var messages = "<span><b>Select Your Friend:</b></span><select class=\"form-control\" name=\"friend\" id=\"friend\" style=\"margin:3px\">";
+            if(data[0].username != "NULL"){
+                for(var i=0;i<data.length;i++)
+                {
+                    messages += "<option value=\""+data[i].username+"\">"+data[i].name_of_person+"</option>";
+                }
+                
+            }
+            else
+            {
+                message += "<option class=\"disabled\" value=\"NULL\">You Have No Friends</option>";
+            }
+            messages += "</select>";
+            //var myObjs = JSON.parse(data);
+            $("#friend_for_select").html(messages);
+        
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+    
+            // log error to browser's console
+            console.log(errorThrown.toString());
+        });
+    },5000);
+
 });

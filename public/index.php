@@ -6,15 +6,4 @@
     {
         render("welcome.php",["title" => "welcome","script" => 3]);
     }
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
 ?>

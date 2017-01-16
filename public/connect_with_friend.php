@@ -96,9 +96,6 @@
                          // clear To: field
                          $mail->ClearAddresses();
                          */
-
-                        
-                        
                         
                 }
                 else
@@ -116,15 +113,4 @@
             echo "Friend Request Can't be Sent To The Same Person !";
         }
     }
-    
-
-
 ?>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
