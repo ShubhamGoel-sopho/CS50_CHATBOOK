@@ -136,6 +136,6 @@ $(document).ready(function(){
             // log error to browser's console
             console.log(errorThrown.toString());
         });
-    },5000);
+    },20000);
 
 });

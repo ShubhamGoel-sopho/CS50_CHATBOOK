@@ -31,7 +31,7 @@
                                             <label for="name">Name</label>
                                             <input name="name" id="name" class="form-control" maxlength="40" minlength="5" required type="text" placeholder="Full Name" />
                                         </div>
-        					            <button type="submit" id="change_name" class="col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn btn-success btn-lg">Change Name</button> 
+        					            <button type="submit" id="change_name" class="col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn btn-success btn-lg">Change Name  <span class="glyphicon glyphicon-arrow-right"></span></button> 
                                     </form>
                                   </div>
                                 </div>
@@ -50,7 +50,7 @@
                                             <input name="email" id="email" class="form-control" maxlength="50"  required type="text" 
                                                 placeholder="Email" />
                                         </div>
-        					            <button type="submit" id="change_email" class="col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn btn-success btn-lg">Change Email</button> 
+        					            <button type="submit" id="change_email" class="col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn btn-success btn-lg">Change Email  <span class="glyphicon glyphicon-arrow-right"></span></button> 
                                     </form>
                                   </div>
                                 </div>
@@ -77,7 +77,7 @@
                                                     placeholder="New Password" minlength="8" maxlength="20" pattern="^(?=[^\d_].*?\d)\w(\w|[!@#$%]){7,20}" required />
                                                 <h6>Please Enter A password btw 8-20 characters having atleast one upper-case,one lower-case,number and special character</h6>
                                         </div>
-        					            <button type="submit" id="change_password" class="col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn btn-success btn-lg">Change Password</button> 
+        					            <button type="submit" id="change_password" class="col-md-12 col-sm-12 col-xs-12 col-lg-12 btn btn-success btn-lg">Change Password <span class="glyphicon glyphicon-arrow-right"></span></button> 
                                     </form>
                                   </div>
                                 </div>

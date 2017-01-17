@@ -7,7 +7,7 @@
     //$row_for_posts = CS50::query("SELECT * FROM posts WHERE user_id = ? ORDER BY date_time",$_SESSION["id"]);
 ?>
 <div class="row">
-    <div class="col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10 slideanim">
+    <div class="col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10 ">
         <h2 class="text-primary">YOUR FRIENDS </h2>
         <div class="panel-group">
         <?php

@@ -9,7 +9,20 @@ body {
 	font-family:Lato,sans-serif;
 	overflow-y:scroll;
 }
+/*properties for the affix nav bar*/
+.affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
 
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
 
 #carousel1, .container-fluid{
 	overflow:hidden;
@@ -78,9 +91,7 @@ footer {
 .bg-grey {
     background-color: #f6f6f6;
 }
-nav{
-	z-index:5;
-}
+
 
  .glyphicon-globe:hover{
 	color:cornflowerblue;

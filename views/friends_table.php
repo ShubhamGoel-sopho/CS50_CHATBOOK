@@ -2,7 +2,7 @@
 <a href="<?=$_SERVER["HTTP_REFERER"] ?>" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
 <br><hr>
 <div class="row">
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
         <div class="table-responsive">
              <?php
                 $rows = CS50::query("SELECT * FROM users WHERE name LIKE ?","%".$friends."%");
@@ -36,5 +36,5 @@
             </table>
         </div>
     </div>
-    <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 alert" id="feedback"></div>
+    <div class="col-lg-6 col-sm-6 col-md-12 col-xs-12 alert" id="feedback"></div>
 </div>

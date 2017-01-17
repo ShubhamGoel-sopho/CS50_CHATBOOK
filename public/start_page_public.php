@@ -22,7 +22,7 @@
   </head>
   
   <body>
- <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="30">
+ <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
   <div class="container-fluid" id="wrapper">
     <div id="carousel1" class="carousel slide" data-ride="carousel">
 	    <ol class="carousel-indicators">
@@ -56,7 +56,7 @@
 	    <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
 	        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span>
 	        </a></div>
-	        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="475">
+	        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="470">
               <ul class="nav navbar-nav">
                 <li><a href="register.php">SIGN UP</a></li>
                 <li><a href="login.php">LOG IN</a></li>
@@ -64,7 +64,7 @@
                 <li><a href="#contact_form">CONTACT US</a></li>
               </ul>
             </nav>
-        <br>
+      
         
        <div  id="about" class="container-fluid bg-grey slideanim" style="padding: 60px 50px">
           <div class="row">
@@ -80,7 +80,7 @@
               </h4>
             </div>
           </div>
-    </div><br>
+    </div>
     <!--contact form -->
     <div  id="contact_form" class="container-fluid bg-grey slideanim">
   <h2 class="text-center">CONTACT</h2>
