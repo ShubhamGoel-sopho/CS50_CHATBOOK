@@ -2,28 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>C$50 CHATBOOK</title>
-    <!-- Bootstrap -->
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap -->
+  	<link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/framework.css" rel="stylesheet">
-       
+         
         
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+  	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  	<!--[if lt IE 9]>
+  		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  		<![endif]-->
+  		<style>
+            /* Center the loader */
+        #loader {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 1;
+          width: 150px;
+          height: 150px;
+          margin: -75px 0 0 -75px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          border-right: 16px solid green;
+          border-bottom: 16px solid red;
+          border-left: 16px solid #ff6600;
+          width: 150px;
+          height: 150px;
+          -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+        }
+  
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        /* Add animation to "page content" */
+        .animate-bottom {
+          position: relative;
+          -webkit-animation-name: animatebottom;
+          -webkit-animation-duration: 1s;
+          animation-name: animatebottom;
+          animation-duration: 1s
+        }
+        
+        @-webkit-keyframes animatebottom {
+          from { bottom:-100px; opacity:0 } 
+          to { bottom:0px; opacity:1 }
+        }
+        
+        @keyframes animatebottom { 
+          from{ bottom:-100px; opacity:0 } 
+          to{ bottom:0; opacity:1 }
+        }
+        
+        
+        </style>
   </head>
   
-  <body>
- <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div class="container-fluid" id="wrapper">
+  
+ <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="myfunction()">
+  <div id="loader"></div>
+  <div class="container-fluid" id="wrapper" style="display:none;" class="animate-bottom">
     <div id="carousel1" class="carousel slide" data-ride="carousel">
 	    <ol class="carousel-indicators">
 	      <li data-target="#carousel1" data-slide-to="0" class="active"></li>
@@ -178,6 +233,18 @@
           date_time();
           
         });
+        
+        var myVar;
+
+        function myfunction() {
+            myVar = setTimeout(showPage, 2000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("wrapper").style.display = "block";
+        }
+        
 </script>
 
 

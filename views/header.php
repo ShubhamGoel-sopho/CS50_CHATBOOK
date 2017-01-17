@@ -34,9 +34,34 @@
         
         <!-- for fonts -->
         <script src="https://use.fontawesome.com/502ed103c2.js"></script>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+         <style>
+          div#load_screen{
+          	background: #ffffff;
+          	opacity: 1;
+          	position: fixed;
+            z-index:10;
+          	top: 0px;
+          	width: 100%;
+          	height: 1600px;
+          }
+         div#load_screen > div#loading{
+          	width:120px;
+          	height:24px;
+          	margin: 300px auto;
+          }
+        </style>
+        <script>
+          window.addEventListener("load", function(){
+          	var load_screen = document.getElementById("load_screen");
+          	document.body.removeChild(load_screen);
+          });
+        </script>	
+  
     </head>
 
   <body>
+    <div id="load_screen"><div id="loading"><img src="img/orange.gif"/></div></div>
 	<div class="container">
 	   <div id="top"><?php if (!empty($_SESSION["id"])): ?>
     	 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
