@@ -74,6 +74,7 @@
     	      <div class="collapse navbar-collapse" id="topFixedNavbar1">
     	        <ul class="nav navbar-nav">
     	          <li ><a  href="contact.php">Contact Us</a></li>
+    	          <li ><a  href="faq.php">FAQ's</a></li>
     	          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
     	            <ul class="dropdown-menu" role="menu">
     	              <li><a href="dev_profile.php">Developer Profile</a></li>
