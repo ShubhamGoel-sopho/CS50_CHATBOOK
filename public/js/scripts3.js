@@ -19,12 +19,12 @@ $(document).ready(function(){
                     $('textarea').val("");
                 }
             ).error(function(){
-                $("#feedback").addClass("alert-danger").text("").html("<p>Not Sent!<p>");
+                $("#feedback").addClass("alert-danger").text("").fadeIn(500).html("<p>Not Sent!<p>").fadeOut(2000);
             });
         }
         else
         {
-            $("#feedback").addClass("alert-danger").text("").html("<p>Please Fill Required Fields!<p>");
+            $("#feedback").addClass("alert-danger").text("").fadeIn(500).html("<p>Please Fill Required Fields!<p>").fadeOut(2000);
         }
         return false;    
     });
@@ -114,7 +114,7 @@ $(document).ready(function(){
         $.getJSON("https://ide50-shubhamgoel9512.c9users.io/dynamic_friend.php",parameter)
         .done(function(data, textStatus, jqXHR) {
             
-            var messages = "<span><b>Select Your Friend:</b></span><select class=\"form-control\" name=\"friend\" id=\"friend\" style=\"margin:3px\">";
+            var messages = "<span><b>Select Your Friend:</b></span><select class=\"form-control\" name=\"friend\" id=\"friend\" style=\"margin:3px\"><option class=\"disabled\" value=\"\">No Friend Selected</option>";
             if(data[0].username != "NULL"){
                 for(var i=0;i<data.length;i++)
                 {

@@ -57,7 +57,7 @@
     </div>
     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
         <h2 class="text text-info">CHAT SCREEN</h2>
-        <div id="chat_room" class="col-lg-12">
+        <div id="chat_room" class="col-lg-12"></div>
     </div>
-    </div>
+</div>
 </div>
