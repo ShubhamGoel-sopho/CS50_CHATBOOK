@@ -5,8 +5,22 @@
     $row = CS50::query("SELECT * FROM users WHERE id = ?",$_SESSION["id"]);
     $rows_for_friend = CS50::query("SELECT * FROM friends WHERE (friend_1 = ? OR friend_2 = ?)",$row[0]["username"],$row[0]["username"]);
     $row_for_posts = CS50::query("SELECT * FROM posts WHERE user_id = ? ORDER BY date_time",$_SESSION["id"]);
+    $image_path = CS50::query("SELECT * FROM images WHERE user_id = ?",$_SESSION["id"]);
 ?>
 <div class="row">
+    <div class="col-lg-12">
+		<img class="img-fluid img-thumbnail float-left" id="profile_image" src="<?php 
+		    if(count($image_path) === 0)
+		    {
+		       echo ""; 
+		    }
+		    else
+		    {
+		        echo $image_path[0]["image_name"];
+		    }
+	    	?>" alt="No Image Provided"/>
+	</div>
+	<br>
     <div class="col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
         <h2 class="text-primary">PROFILE</h2>
         <div class="list-group" class="text-primary">

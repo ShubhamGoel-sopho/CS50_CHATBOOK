@@ -7,6 +7,6 @@
     logout();
 
     // redirect user
-    redirect("login.php");
+    redirect("start_page_public.php");
 
 ?>

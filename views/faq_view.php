@@ -1,4 +1,4 @@
-<br><br><br><br>
+<br><br><br><br><br>
 <a href="<?=$_SERVER["HTTP_REFERER"] ?>" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
 <br><hr>
         <div class="row">

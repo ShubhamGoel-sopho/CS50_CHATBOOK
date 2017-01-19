@@ -28,7 +28,8 @@
         <script src="/js/bootstrap.min.js"></script>
 
         <script src="/js/scripts<?=htmlspecialchars($script) ?>.js"></script>
-        
+            
+         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>    
          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         
@@ -82,6 +83,8 @@
     	              <li><a href="friends.php">Friends</a></li>
     	              <li class="divider"></li>
     	              <li><a href="edit_profile.php">Edit Profile</a></li>
+    	              <li class="divider"></li>
+    	              <li><a href="upload_your_image.php">Upload Your Image</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -92,6 +95,7 @@
     	          <button type="submit" id="friend_button" class="btn btn-default">Submit</button>
                 </form>
     	        <ul class="nav navbar-nav navbar-right">
+    	           
     	          <li><a href="logout.php">Logout</a></li>
     	        </ul>
               </div>

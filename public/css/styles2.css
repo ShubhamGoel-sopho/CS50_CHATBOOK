@@ -5,6 +5,12 @@ body {
 html{
     overflow:auto;
 }
+
+#profile_image
+{
+    height:250px;
+    margin-left:85px;
+}
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 8px;
