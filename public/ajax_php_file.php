@@ -34,11 +34,18 @@
                             $val = CS50::query("INSERT INTO images (user_id,image_name) VALUES(?,?)",$_SESSION["id"],$targetPath);
                         }
                         elseif(count($count) === 1)
-                        {
+                        {   
+                            $old_image_name = $count[0]["image_name"];
                             $val = CS50::query("UPDATE images SET image_name = ? WHERE user_id = ?",$targetPath,$_SESSION["id"]);
+                            
+                            //change the permission of the old file --> no need to change the permissions
+                            //chmod($old_image_name,777);
+                            //delete old file from the upload directory
+                            $is_deleted = unlink($old_image_name);
+                            
                         }
                         
-                        if($val){
+                        if($val && $is_deleted){
                             echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
                             echo "<br/><b>File Name:</b> " . $_FILES["file"]["name"] . "<br>";
                             echo "<b>Type:</b> " . $_FILES["file"]["type"] . "<br>";
