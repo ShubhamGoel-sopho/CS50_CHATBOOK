@@ -9,7 +9,7 @@
             </div>
             <hr>
             <form id="uploadimage" action="" method="POST" enctype="multipart/form-data">
-                <div class="row"><div class="col-lg-offset-3 col-sm-offset-3 col-md-offset-3 col-xs-offset-3">
+                <div class="row"><div class="col-lg-offset-3 col-sm-offset-3 col-md-offset-3 col-xs-offset-2">
                 <div id="image_preview"><img id="previewing" src="img/noimage.png" class="image-fill img-thumbnail float-center" /></div>  
                 </div></div>
                 <br>
@@ -22,7 +22,7 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <div class="row"><div class="col-lg-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-offset-1">
+                    <div class="row"><div class="col-lg-offset-1 col-sm-offset-1 col-md-offset-1">
                         <button type="submit" value="Upload" class="submit">Upload <span class="glyphicon glyphicon-upload"></span></button>
                     </div></div>                
                 </div>

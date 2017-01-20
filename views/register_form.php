@@ -35,7 +35,7 @@
     <button type="submit" id="register" class="col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 btn btn-success btn-lg">Sign up <span class="glyphicon glyphicon-log-in"></span></button> 
 </form>
 </div></div><br>
-    <div class="row"><div class="col-lg-offset-5">
+    <div class="row"><div class="col-lg-offset-5 col-xs-offset-4 col-sm-offset-4 col-md-offset-4">
     or <a  class="btn btn-danger btn-lg" href="login.php">log in <span class="glyphicon glyphicon-new-window"></span></a>
     </div></div>
     <br>
