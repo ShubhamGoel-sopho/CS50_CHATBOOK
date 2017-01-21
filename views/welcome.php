@@ -38,12 +38,14 @@
                         <div class="col-lg-4">
                             <button type="submit" id="send" class="btn btn-info btn-lg">Send <span class="glyphicon glyphicon-send"></span></button>
                         </div> 
-                         <div class="col-lg-8">
+                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                            <div class="form-group" id="friend_for_select">
                             
                           </div>
                         </div>
-                        
+                        <div class="col-lg-4 col-sm-offset-8 col-sm-4  col-md-4 col-xs-offset-6 col-xs-6">
+                            <button id="scroll_to_bottom" data-toggle="tooltip" title="Scroll To Bottom" class="btn btn-info" style="border-radius:100%"><span class="glyphicon glyphicon-chevron-down"></span></button>
+                        </div>
                     </div>              
                 </form>
             </div>

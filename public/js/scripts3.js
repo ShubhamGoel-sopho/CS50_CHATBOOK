@@ -1,5 +1,17 @@
 $(document).ready(function(){
     
+   /* $("#scroll_to_bottom").click(function(){
+        var objDiv = document.getElementById("chat_room");
+        objDiv.scrollTop = objDiv.scrollHeight;
+        return false;
+    });*/
+    //to provide the scrolling effect to chat room
+    $("#scroll_to_bottom").click(function(){
+        $("#chat_room").animate({scrollTop:$("#chat_room")[0].scrollHeight}, 2000);
+        return false;
+    });
+    
+    $('[data-toggle="tooltip"]').tooltip();
     //listen for the click event for the for the send button (sending messages to the user)
     $("#send").click(function(){
         var Message = $("#chat").val();
