@@ -1,13 +1,16 @@
 body {
     font: 400 15px Lato, sans-serif;
-    
+    background-image: url(DeathtoStock_Wired2.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
 }
 html{
     overflow:auto;
 }
 
 .jumbotron { 
-    background-color: #f4511e; /* Orange */
+    background-color: #a64dff; /* Orange */
     color: #ffffff;
     height:200px;
     

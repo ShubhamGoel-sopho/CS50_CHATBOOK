@@ -1,6 +1,9 @@
 body {
     font: 400 15px Lato, sans-serif;
     overflow-y:scroll;
+    background-image: url(DeathtoStock_Wired8.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 html{
     overflow:auto;

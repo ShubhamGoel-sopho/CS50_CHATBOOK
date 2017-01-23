@@ -1,6 +1,10 @@
 body {
     font: 400 15px Lato, sans-serif;
     overflow-y:scroll;
+    background-image: url(DeathtoStock_Wired7.jpg);
+    background-repeat: no-repeat;
+    
+    background-size:cover;
 }
 html{
     overflow:auto;

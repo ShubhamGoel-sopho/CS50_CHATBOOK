@@ -14,7 +14,17 @@ html {
 body {
     font: 400 15px Lato, sans-serif;
     overflow-y:scroll;
-    
+    background-image: url(../img/DeathtoStock_Wired3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+p{
+    color:#3f70bf;    
+}
+h4{
+    color:white;
 }
 
 
@@ -27,6 +37,7 @@ body {
     margin-left:auto;
     margin-right:auto;
     overflow:hidden;
+    
 }
 
 

@@ -1,6 +1,9 @@
 body {
 font-family: Lato, sans-serif;
-background-color:#d9d9d9;
+   background-image: url(DeathtoStock_Wired10.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
 }
 .thumbnail {
     background-color:#ffcc66;

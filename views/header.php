@@ -32,7 +32,7 @@
          <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>    
          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-        
+         
         <!-- for fonts -->
         <script src="https://use.fontawesome.com/502ed103c2.js"></script>
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
