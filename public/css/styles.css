@@ -14,18 +14,22 @@ html {
 body {
     font: 400 15px Lato, sans-serif;
     overflow-y:scroll;
-    background-image: url(../img/DeathtoStock_Wired3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-color:#adb2a4;
+    /*background-image: url(../img/DeathtoStock_Wired3.jpg);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;*/
 }
 
-p{
-    color:#3f70bf;    
+/*p{
+    color:b;    
 }
 h4{
     color:white;
-}
+}*/
 
 
 .jumbotron { 

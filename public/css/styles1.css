@@ -1,9 +1,12 @@
 body {
     font: 400 15px Lato, sans-serif;
     background-image: url(DeathtoStock_Wired2.jpg);
-    background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-repeat:repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
     background-size:cover;
+    background-position:center;
 }
 html{
     overflow:auto;
